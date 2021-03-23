@@ -106,7 +106,119 @@ html {
     transition-duration: .5s;
 }
 
-/* ------------------------ HEADER ------------------------ */
+.mobile-menu {
+    display: none;
+}
+
+.mobile_overlay {
+    position        : fixed;
+    width           : 100%;
+    height          : 100%;
+    top             : 0;
+    left            : 0;
+    right           : 0;
+    bottom          : 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index         : 9998;
+    cursor          : pointer;
+    display         : none;
+}
+
+.mobile_overlay.active {
+    display: block;
+}
+
+.mobile-menu .bar {
+    height          : 5px;
+    width           : 30px;
+    background-color: #000;
+    margin          : 5px auto;
+    transition      : all .7s ease;
+}
+
+.mobile-menu .button {
+    cursor    : pointer;
+    transition: all .7s ease;
+    position  : absolute;
+    top       : 30px;
+    left      : 40px;
+    z-index   : 9999;
+}
+
+.mobile-menu .button.push-right {
+    left            : 300px;
+    top             : 0;
+    background-color: #FD846B;
+    padding         : 2.5px 5px;
+    position        : fixed;
+}
+
+.mobile-menu .middle {
+    margin: 0 auto;
+}
+
+.mobile-menu .button.active .top {
+    transform: translateY(10px) rotateZ(45deg);
+}
+
+.mobile-menu .button.active .bottom {
+    transform: translateY(-10px) rotateZ(-45deg);
+}
+
+.mobile-menu .button.active .middle {
+    width: 0;
+}
+
+.mobile-menu .mobile_sidebar {
+    height          : 100%;
+    width           : 0;
+    position        : fixed;
+    top             : 0;
+    left            : 0;
+    background-color: #FD846B;
+    overflow-x      : hidden;
+    transition      : 0.7s;
+    z-index         : 9998;
+}
+
+.mobile-menu .mobile_sidebar.active {
+    width: 300px;
+}
+
+.mobile-menu .mobile_sidebar ul li a {
+    color: #fff;
+}
+
+.mobile-menu .search-bar {
+    position: relative;
+}
+
+.mobile-menu .input-group-field {
+    border       : none;
+    width        : 100%;
+    height       : 40px;
+    border-bottom: 1px solid #ececec;
+}
+
+.mobile-menu .icon-search {
+    position        : absolute;
+    right           : 0;
+    padding         : 11px 12px;
+    background-color: #fff;
+    border          : none;
+    border-bottom   : 1px solid #ececec;
+}
+
+.mobile-menu a {
+    display         : block;
+    width           : 100%;
+    color           : #000;
+    background-color: #fff;
+    border-bottom   : 1px solid #ececec;
+    padding         : 20px 16px;
+}
+
+/* ------------------------ MAIN ------------------------ */
 
 .swiper-container {
     width : 100%;
@@ -116,10 +228,10 @@ html {
 .swiper-container .swiper-slide {
     font-size        : 18px;
     background       : #fff;
-    height           : 750px;
+    height           : 700px;
     max-width        : 100%;
     background-repeat: no-repeat;
-    background-size  : contain;
+    background-size  : cover;
     display          : table;
 }
 
@@ -515,7 +627,7 @@ html {
     background-image   : url('../Images/Footer-Background.png');
     background-size    : cover;
     background-position: center;
-    height             : 550px;
+    height             : 600px;
 }
 
 .footer-container .row {
@@ -538,7 +650,7 @@ html {
     display        : flex;
     justify-content: center;
     align-items    : center;
-    margin-top: 20px;
+    margin-top     : 20px;
 }
 
 .footer-container .notify-btn.active {
@@ -621,9 +733,9 @@ html {
     z-index   : 200;
     opacity   : 1;
     transition: all 0.3s ease-in;
-    left: 50%;
-    position: absolute;
-    transform: translateX(-50%);
+    left      : 50%;
+    position  : absolute;
+    transform : translateX(-50%);
 }
 
 .footer-container .submit-btn {
@@ -650,11 +762,337 @@ html {
     cursor    : pointer;
 }
 
-.footer-container .footer_social ul{
-    display: flex;
+.footer-container .footer_social ul {
+    display        : flex;
     justify-content: space-around;
 }
 
-.footer-container .footer_social i{
-    color: #fc846b;
+.footer-container .footer_social i {
+    color    : #fc846b;
+    font-size: 20px;
+}
+
+.footer-container .footer_social i:hover {
+    color              : #fff;
+    transition-duration: 1s;
+}
+
+.footer-container .footer_menu a {
+    font-weight    : bold;
+    color          : #fff;
+    text-decoration: none;
+    padding        : 0 30px;
+    font-size      : 18px;
+}
+
+.footer-container .footer_menu li:not(:last-child) a {
+    border-right: 2px solid #fff;
+}
+
+.footer-container .footer_menu a:hover {
+    color              : #fc846b;
+    transition-duration: 1s;
+}
+
+.footer-container hr {
+    margin-top: 60px;
+    border-top: 2px solid rgba(252, 132, 107, 0.3);
+    ;
+}
+
+.footer-container p:last-child {
+    color     : #fff;
+    margin-top: 40px;
+}
+
+
+/* ------------------------ RESPONSIVE ------------------------ */
+
+/* TABLET */
+@media (max-width: 1024px) and (min-width: 740px) {
+
+    .pl-5 {
+        padding-left: 1rem !important;
+    }
+
+    .pr-5 {
+        padding-right: 1rem !important;
+    }
+
+    /* ------------------------ HEADER ------------------------ */
+    .header-container .header_menu {
+        display: none;
+    }
+
+    .header-container .header_account .dropdown,
+    .header-container .header_account .fa-user {
+        display: none;
+    }
+
+    .header-container .header_account ul {
+        display: block;
+    }
+
+    .header-container .header_account ul li {
+        padding: 23px 0px;
+    }
+
+    .header-container .header_logo {
+        margin-left: 25%;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+
+    /* ------------------------ MAIN ------------------------ */
+    .swiper-container .swiper-slide {
+        background-size: cover;
+        height         : 400px;
+    }
+
+    .slide_subheading {
+        font-size: 18px;
+    }
+
+    .slide_heading {
+        font-family: 'Playfair Display';
+        font-size  : 20px;
+        color      : #FD846B;
+    }
+
+    .slide_text {
+        font-size: 14px;
+    }
+
+    .slider {
+        margin-top: 64px;
+    }
+
+    .swiper-container .slide_btn {
+        padding   : 10px 30px;
+        font-size : 14px;
+        margin-top: 1rem !important;
+    }
+
+    .collections_container img {
+        max-width: 100%;
+    }
+
+    .collections_container .collections_item {
+        margin-top: 65px;
+    }
+
+    .shopify-container .row .col-lg-6:first-child img {
+        max-width: 100%;
+    }
+
+    .shopify_subheading {
+        font-size: 16px;
+    }
+
+    .shopify_feature_heading {
+        font-size: 24px;
+    }
+
+    .shopify-container .shopify_feature {
+        padding: 15px;
+    }
+
+    .shopify-container .shopify_feature .shopify_feature_text {
+        font-size  : 18px;
+        margin-left: 20px;
+    }
+
+    .shopify-container .shopify_feature .shopify_feature_icon {
+        font-size: 1.5em;
+    }
+
+    .testimonial-container .testimonial-text p.mt-5:first-child {
+        margin-top: 1rem !important;
+    }
+
+    .testimonial-container .testimonial-carousel-cell .row {
+        margin: 170px 0;
+    }
+
+    .testimonial-container .flickity-viewport {
+        height: 380px !important;
+    }
+
+    .testimonial-container .flickity-page-dots {
+        bottom: 50px;
+    }
+
+    .video-banner {
+        height: 400px;
+    }
+
+    .video-banner .row .col-md-6 {
+        margin-top: 50px;
+    }
+
+    .video-banner .video iframe {
+        width : 500px;
+        height: 300px;
+    }
+
+    .video-banner .video i {
+        display: none;
+    }
+
+    .blog-container .slide_heading {
+        font-size: 20px;
+    }
+
+    .blog-container .card-body {
+        padding: 0.25rem;
+    }
+
+    .footer-container .footer_social ul {
+        justify-content: center;
+    }
+
+    .footer-container .footer_social ul li {
+        margin: 0 10px;
+    }
+
+    .footer-container .footer_menu a {
+        padding: 0 10px;
+    }
+}
+
+/* PHONE */
+@media (max-width: 739px) {
+
+    img {
+        max-width: 100%;
+    }
+
+    .col-sm-6 {
+        width: 50%;
+    }
+
+    .col-sm-3 {
+        width: 25%;
+    }
+
+    .pl-5 {
+        padding-left: 0.5rem !important;
+    }
+
+    .pr-5 {
+        padding-right: 0.5rem !important;
+    }
+
+    /* ------------------------ HEADER ------------------------ */
+    .header-container {
+        position: relative;
+    }
+
+    .header-container .header_menu {
+        display: none;
+    }
+
+    .header-container .header_account .dropdown,
+    .header-container .header_account .fa-user {
+        display: none;
+    }
+
+    .header-container .header_account ul {
+        display: block;
+    }
+
+    .header-container .header_account ul li {
+        padding: 23px 0px;
+    }
+
+    .header-container .header_logo {
+        margin-left: 25%;
+        padding-top: 5px;
+    }
+
+    .header-container .header_logo img {
+        max-width: 100%;
+    }
+
+    .mobile-menu .button {
+        left: 20px;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+
+    .swiper-container .swiper-slide>.row {
+        display: block;
+    }
+
+    .swiper-container .swiper-slide {
+        height             : 400px;
+        background-position: center right;
+        margin-right: 0 !important;
+    }
+
+    .slide_subheading {
+        font-size: 18px;
+    }
+
+    .blog-container .slide_heading {
+        font-size: 20px;
+    }
+
+    .swiper-container .slide_text {
+        margin-top: 4rem !important;
+    }
+
+    .collections_container {
+        margin-top: 60px;
+    }
+
+    .collections_container .collections_item {
+        margin-top: 5rem;
+    }
+
+    .collections_container .slide_text {
+        margin-top: 1rem !important;
+    }
+
+    .shopify-container {
+        background-position: 40px 130px;
+    }
+
+    .testimonial-container {
+        text-align: center;
+    }
+
+    .testimonial-container .flickity-page-dots {
+        bottom: 0;
+    }
+
+    .video-banner {
+        height: 200px;
+    }
+
+    .video-banner .row .col-sm-12 {
+        margin: 0 !important;
+    }
+
+    .video-banner .slide_heading {
+        font-size: 18px;
+    }
+
+    .video-banner .slide_text {
+        margin-top: 1rem !important;
+        font-size : 16px;
+    }
+
+    .video-banner .video-show {
+        margin-top: 1rem !important;
+    }
+
+    .video-banner .video-show .fa-play-circle {
+        font-size: 2em !important;
+    }
+
 }
