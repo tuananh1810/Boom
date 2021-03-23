@@ -11,9 +11,7 @@ var swiper = new Swiper('.swiper1', {
         prevEl: '.swiper1-button-prev',
     },
     grabCursor: true,
-    autoplay: {
-        delay: 3000,
-    },
+    autoplay: false,
     speed: 2000,
 });
 
@@ -93,3 +91,18 @@ $(function () {
         $(".thanku-btn").addClass("active");
     });
 });
+
+$('.button').click(function () {
+    $('.button').toggleClass('active');
+    $('.mobile_sidebar').toggleClass('active');
+    $('.button').toggleClass('push-right');
+    $('.mobile_overlay').toggleClass('active');
+});
+
+$('.mobile_overlay').click(function () {
+    $('.button').toggleClass('active');
+    $('.mobile_sidebar').toggleClass('active');
+    $('.button').toggleClass('push-right');
+    $('.mobile_overlay').toggleClass('active');
+});
+
