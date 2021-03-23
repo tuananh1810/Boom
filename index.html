@@ -31,19 +31,41 @@
 
         <header class="header-container">
 
-            <div class="row pl-5 pr-5 pt-3 pb-3 header_logo">
-                <div class="col-lg-2">
+            <div class="row pl-5 pr-5 pt-3 pb-3">
+
+                <div class="mobile-menu">
+                    <div class="mobile_overlay"></div>
+                    <div class="button" id="btn">
+                        <div class="bar top"></div>
+                        <div class="bar middle"></div>
+                        <div class="bar bottom"></div>
+                    </div>
+                    <div class="mobile_sidebar">
+                        <form class="search-bar" role="search">
+                            <input type="search" class="input-group-field header-search__input pl-5"
+                                placeholder="Search">
+                            <button type="submit" class="icon-search">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </form>
+                        <a href="home.html">Home</a>
+                        <a href="catalog.html">Catalog</a>
+                        <a href="#">Blog</a>
+                        <a href="#">Pages</a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 col-sm-6 text-md-center header_logo">
                     <img src="Images/Boom-Logo.png" alt="Boom-Logo">
                 </div>
                 <div class="col-lg-6 header_menu">
                     <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="HTML/catalog.html">Catalog</a></li>
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="catalog.html">Catalog</a></li>
                         <li><a href="#">Blog</a></li>
                         <li><a href="#">Pages</a></li>
                     </ul>
                 </div>
-                <div class="col-lg-4 text-right header_account">
+                <div class="col-lg-4 col-md-3 col-sm-3 text-right header_account">
                     <ul>
                         <li>
                             <div class="dropdown">
@@ -82,7 +104,7 @@
                 <div class="swiper-wrapper">
                     <div class="swiper-slide slide1">
                         <div class="row pl-5 pr-5">
-                            <div class="col-lg-6 slider">
+                            <div class="col-lg-6 col-md-6 col-sm-12 slider">
                                 <p class="slide_subheading">Sing Along</p>
                                 <p class="slide_heading mt-3">Inspired Design & Quality Sound With Beats</p>
                                 <p class="slide_text mt-5">
@@ -95,7 +117,7 @@
                     </div>
                     <div class="swiper-slide slide2">
                         <div class="row pl-5 pr-5">
-                            <div class="col-lg-6 slider">
+                            <div class="col-lg-6 col-md-6 slider">
                                 <p class="slide_subheading">Sing Along</p>
                                 <p class="slide_heading mt-3">Inspired Design & Quality Sound With Beats</p>
                                 <p class="slide_text mt-5">
@@ -108,7 +130,7 @@
                     </div>
                     <div class="swiper-slide slide3">
                         <div class="row pl-5 pr-5">
-                            <div class="col-lg-6 slider">
+                            <div class="col-lg-6 col-md-6 slider">
                                 <p class="slide_subheading">Sing Along</p>
                                 <p class="slide_heading mt-3">Inspired Design & Quality Sound With Beats</p>
                                 <p class="slide_text mt-5">
@@ -128,10 +150,10 @@
             <section class="collections_container animate__animated animate__fadeIn wow fadeIn"
                 data-wow-duration="1.5s">
                 <div class="row pl-5 pr-5">
-                    <div class="col-lg-6">
+                    <div class="col-lg-6 col-md-6 col-sm-12">
                         <img src="Images/Collections/Airpod.png" alt="Airpod">
                     </div>
-                    <div class="col-lg-6 collections_item">
+                    <div class="col-lg-6 col-md-6  col-sm-12collections_item">
                         <div class="slide_subheading">Simply awesome</div>
                         <p class="slide_heading mt-3">Amazing music gadgets for music lovers</p>
                         <p class="slide_text mt-5">
@@ -143,7 +165,7 @@
                 </div>
 
                 <div class="row pl-5 pr-5">
-                    <div class="col-lg-6 collections_item">
+                    <div class="col-lg-6 col-md-6 collections_item">
                         <div class="slide_subheading">Simply awesome</div>
                         <p class="slide_heading mt-3">Amazing music gadgets for music lovers</p>
                         <p class="slide_text mt-5">
@@ -152,7 +174,7 @@
                         </p>
                         <button type="button" class="slide_btn mt-5">Buy now</button>
                     </div>
-                    <div class="col-lg-6">
+                    <div class="col-lg-6 col-md-6">
                         <img src="Images/Collections/Boom-wire.png" alt="Boom-wire">
                     </div>
                 </div>
@@ -160,10 +182,12 @@
 
             <section class="shopify-container pt-5 pb-5">
                 <div class="row pr-5">
-                    <div class="col-lg-6 animate__animated wow animate__slideInUp slideInUp" data-wow-duration="1.5s">
+                    <div class="col-lg-6 col-md-6 col-sm-12 animate__animated wow animate__slideInUp slideInUp"
+                        data-wow-duration="1.5s">
                         <img src="Images/Collections/Shopify.png" alt="Shopify">
                     </div>
-                    <div class="col-lg-6 animate__animated wow animate__slideInUp slideInUp" data-wow-duration="1.5s">
+                    <div class="col-lg-6 col-md-6 animate__animated wow animate__slideInUp slideInUp"
+                        data-wow-duration="1.5s">
                         <div class="shopify_subheading">Advanced Features</div>
                         <p class="shopify_feature_heading mt-5">Ultimate comfort and best sound</p>
                         <ul>
@@ -210,7 +234,7 @@
 
             <section class="testimonial-container" data-wow-duration="1.5s">
                 <div class="row">
-                    <div class=" offset-lg-6 col-lg-6 mt-5">
+                    <div class=" offset-lg-6 col-lg-6 offset-md-6 col-md-6 col-sm-12 mt-5">
                         <div class="slide_subheading">Magical listening experience</div>
                         <p class="slide_heading mt-3">Wireless Headphones & Ear-buds are
                             Comfort & Fit</p>
@@ -219,10 +243,10 @@
                 <div class="testimonial-carousel">
                     <div class="testimonial-carousel-cell">
                         <div class="row pl-5 pr-5">
-                            <div class="col-lg-6 testimonial-avatar text-center">
+                            <div class="col-lg-6 col-md-6 col-sm-12 testimonial-avatar text-center">
                                 <img class="avatar" src="Images/Collections/Testimonials1.png" alt="Testimonials1">
                             </div>
-                            <div class="col-lg-6 testimonial-text">
+                            <div class="col-lg-6 col-md-6 col-sm-12 testimonial-text">
                                 <p class="slide_text mt-5">
                                     Pharetra sit amet aliquam id diam. Cum sociis natoque penatibus et magnis. Eget
                                     nullam non nisi est sit amet facilisis magna. Odio morbi quis commodo odio aenean
@@ -236,10 +260,10 @@
                     </div>
                     <div class="testimonial-carousel-cell">
                         <div class="row pl-5 pr-5">
-                            <div class="col-lg-6 testimonial-avatar text-center">
+                            <div class="col-lg-6 col-md-6 col-sm-12 testimonial-avatar text-center">
                                 <img class="avatar" src="Images/Collections/Testimonials2.png" alt="Testimonials2">
                             </div>
-                            <div class="col-lg-6 testimonial-text">
+                            <div class="col-lg-6 col-md-6 col-sm-12 testimonial-text">
                                 <p class="slide_text mt-5">
                                     Pharetra sit amet aliquam id diam. Cum sociis natoque penatibus et magnis. Eget
                                     nullam non nisi est sit amet facilisis magna. Odio morbi quis commodo odio aenean
@@ -253,10 +277,10 @@
                     </div>
                     <div class="testimonial-carousel-cell">
                         <div class="row pl-5 pr-5">
-                            <div class="col-lg-6 testimonial-avatar text-center">
+                            <div class="col-lg-6 col-md-6 col-sm-12 testimonial-avatar text-center">
                                 <img class="avatar" src="Images/Collections/Testimonials3.png" alt="Testimonials3">
                             </div>
-                            <div class="col-lg-6 testimonial-text">
+                            <div class="col-lg-6 col-md-6 col-sm-12 testimonial-text">
                                 <p class="slide_text mt-5">
                                     Pharetra sit amet aliquam id diam. Cum sociis natoque penatibus et magnis. Eget
                                     nullam non nisi est sit amet facilisis magna. Odio morbi quis commodo odio aenean
@@ -273,7 +297,7 @@
 
             <section class="video-banner mt-3 mb-5">
                 <div class="row text-center">
-                    <div class="offset-3 col-lg-6">
+                    <div class="offset-3 col-lg-6 col-md-6 col-sm-12">
                         <p class="slide_heading mt-3">The Right Headphones</p>
                         <p class="slide_text mt-5">
                             In ornare quam viverra orci sagittis. Duis ultricies lacus sed turpis tincidunt id aliquet
@@ -296,13 +320,13 @@
 
             <section class="blog-container pl-5 pr-5 pb-5">
                 <div class="row text-center">
-                    <div class="col-lg-12 blog_text">
+                    <div class="col-lg-12 col-md-12 blog_text">
                         <p class="slide_text mt-3">Good treble performance</p>
                         <p class="slide_heading mt-5">Rhythmic Music Blog</p>
                     </div>
                 </div>
                 <div class="row mt-5">
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 col-md-4">
                         <div class="card">
                             <a href="#" class="blog_card"><img class="card-img-top" src="Images/Blog/Blog1.png"
                                     alt="Blog1"></a>
@@ -310,7 +334,8 @@
                                 <a href="#">
                                     <p class="slide_heading mt-3">The Right Headphones</p>
                                 </a>
-                                <p class="slide_text mt-5">
+                                <p class="blog_comment mt-2">by Ramamoorthi M / Aug 04, 2020 1 comment</p>
+                                <p class="slide_text mt-3">
                                     In ornare quam viverra orci sagittis. Duis ultricies lacus sed turpis tincidunt id
                                     aliquet
                                     risus. Arcu felis bibendum ut tristique et.
@@ -319,7 +344,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 col-md-4">
                         <div class="card">
                             <a href="#"><img class="card-img-top" src="Images/Blog/Blog2.png" alt="Blog2"></a>
                             <div class="card-body">
@@ -336,14 +361,15 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 col-md-4">
                         <div class="card">
                             <a href="#"><img class="card-img-top" src="Images/Blog/Blog3.png" alt="Blog3"></a>
                             <div class="card-body">
                                 <a href="#">
                                     <p class="slide_heading mt-3">The Right Headphones</p>
                                 </a>
-                                <p class="slide_text mt-5">
+                                <p class="blog_comment mt-2">by Ramamoorthi M / Aug 04, 2020 1 comment</p>
+                                <p class="slide_text mt-3">
                                     In ornare quam viverra orci sagittis. Duis ultricies lacus sed turpis tincidunt id
                                     aliquet
                                     risus. Arcu felis bibendum ut tristique et.
@@ -372,13 +398,22 @@
                 </div>
                 <div class="offset-lg-4 col-lg-4 footer_social mt-5">
                     <ul>
-                        <li><a href="#"><i class="fab fa-facebook-square fa-2x"></i></a></li>
-                        <li><a href="#"><i class="fab fa-twitter fa-2x"></i></a></li>
-                        <li><a href="#"><i class="fab fa-instagram fa-2x"></i></a></li>
-                        <li><a href="#"><i class="fab fa-pinterest fa-2x"></i></a></li>
+                        <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
+                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fab fa-pinterest"></i></a></li>
+                    </ul>
+                    <ul class="mt-5 footer_menu">
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="catalog.html">Shop</a></li>
+                        <li><a href="#">Contact</a></li>
                     </ul>
                 </div>
             </div>
+            <hr>
+            <p class="text-center">Copyright © 2020 Boom Earwear Powered by Shopify. All Rights Reserved.</p>
         </footer>
     </div>
 
