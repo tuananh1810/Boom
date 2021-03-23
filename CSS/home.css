@@ -1108,4 +1108,12 @@ html {
         padding: 0 10px;
     }
 
+    .footer-container input.active {
+        width: 250px;
+    }
+
+    .footer-container .submit-btn {
+        right: 30px;
+    }
+
 }
