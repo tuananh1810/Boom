@@ -1031,7 +1031,7 @@ html {
     .swiper-container .swiper-slide {
         height             : 400px;
         background-position: center right;
-        margin-right: 0 !important;
+        /* margin-right    : 0 !important; */
     }
 
     .slide_subheading {
@@ -1093,6 +1093,19 @@ html {
 
     .video-banner .video-show .fa-play-circle {
         font-size: 2em !important;
+    }
+
+    .video-banner .video iframe {
+        width : 350px;
+        height: 300px;
+    }
+
+    .video-banner .video i {
+        display: none;
+    }
+
+    .footer-container .footer_menu a {
+        padding: 0 10px;
     }
 
 }
