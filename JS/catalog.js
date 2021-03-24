@@ -73,11 +73,17 @@ $(document).ready(function () {
     $('.pro_view').addClass('slideDownHalf');
 });
 
+var money = 910.00;
+var total = 0;
+$('#pro_view_total').html("$" + total + ".00 USD");
+$('#pro_view_total').text($('#pro_view_total').text().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,"));
 var quantity = 0;
 
 $('.fa-plus').click(function () {
     quantity++;
     $('#quantity').html(quantity);
+    var x = quantity * 910.00;
+    $('#pro_view_total').html(x);
 });
 
 $('.fa-minus').click(function () {
@@ -87,21 +93,45 @@ $('.fa-minus').click(function () {
     }
 });
 
+$(function () {
+    $(".notify-btn").click(function () {
+        $(".notify-btn").addClass("active");
+        $(input).addClass("active");
+        $(".submit-btn").addClass("active");
+    });
+});
 
-// $('.pro_btn').live('click', function(){
-//     $(this).toggle(function(){
-//         $(this).siblings('.quick_view').removeClass('slideDownFull').addClass('slideUp');
-//     }, function(){
-//         $(this).siblings('.quick_view').removeClass('slideUp').addClass('slideDownFull');
-//     }).trigger('click');
-// });
+$(function () {
+    $(".submit-btn").click(function () {
+        $(this).removeClass("active");
+        $("input").removeClass("active");
+        $(".thanku-btn").addClass("active");
+    });
+});
 
-// $(".sub_img").click(function () {
+$('.button_filter').click(function () {
+    $('.mobile_filter_sidebar').toggleClass('active');
+    $('.mobile_overlay').toggleClass('active');
+});
 
-//     console.log($(this).parents().find('.main_img'));
-// });
+$('.mobile_overlay').click(function () {
+    $('.mobile_filter_sidebar').toggleClass('active');
+    $('.mobile_overlay').toggleClass('active');
+});
 
-// var mainImg = document.getElementsByClassName('main_img');
-// for(var i = 0; i < mainImg.length; i++){
-//     console.log($(".main_img"));
-// }
+
+var onTop = document.getElementById('top');
+window.addEventListener('scroll', function () {
+    if (window.scrollY !== 0) {
+        onTop.style.cssText = 'display: block; position: fixed';
+    }
+    else {
+        onTop.style.cssText = 'display: none;';
+    }
+});
+
+onTop.addEventListener('click', function () {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+});
+
