@@ -241,6 +241,10 @@ html {
     padding         : 20px 16px;
 }
 
+.mobile-filter {
+    display: none;
+}
+
 .mobile-filter .mobile_filter_sidebar {
     height          : 100%;
     width           : 0;
@@ -1153,6 +1157,10 @@ html {
         display: block;
     }
 
+    .mobile-filter {
+        display: block;
+    }
+
     .mobile-filter .button_filter {
         display: block;
     }
@@ -1215,12 +1223,12 @@ html {
     }
 
     .product-list .slideOut {
-        display: none !important;
+        display  : none !important;
         animation: none !important;
     }
 
     .product-list .slideInRight {
-        display: none !important;
+        display  : none !important;
         animation: none !important;
     }
 
