@@ -11,7 +11,30 @@
 }
 
 html {
-    font-family: 'Poppins';
+    font-family    : 'Poppins';
+    scroll-behavior: smooth;
+}
+
+#top {
+    display            : none;
+    width              : 50px;
+    height             : 50px;
+    right              : 10px;
+    bottom             : 55px;
+    background-color   : #373737;
+    background-image   : url('../Images/scrollTop.png');
+    background-position: center center;
+    background-repeat  : no-repeat;
+    background-size    : 25% auto;
+    border-radius      : 50%;
+    box-shadow         : 0 0 2px 1px rgba(0, 0, 0, 0.15);
+    transition-duration: 0.5s;
+    cursor             : pointer;
+    z-index            : 9998;
+}
+
+#top:hover {
+    background-color: #FD846B
 }
 
 /* ------------------------ HEADER ------------------------ */
@@ -104,6 +127,148 @@ html {
 .header-container .header_account i:hover {
     color              : #FD846B;
     transition-duration: .5s;
+}
+
+.mobile-menu {
+    display: none;
+}
+
+.mobile_overlay {
+    position        : fixed;
+    width           : 100%;
+    height          : 100%;
+    top             : 0;
+    left            : 0;
+    right           : 0;
+    bottom          : 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index         : 9998;
+    cursor          : pointer;
+    display         : none;
+}
+
+.mobile_overlay.active {
+    display: block;
+}
+
+.mobile-menu .bar {
+    height          : 5px;
+    width           : 30px;
+    background-color: #000;
+    margin          : 5px auto;
+    transition      : all .7s ease;
+}
+
+.mobile-menu .button {
+    cursor    : pointer;
+    transition: all .7s ease;
+    position  : absolute;
+    top       : 30px;
+    left      : 40px;
+    z-index   : 9999;
+}
+
+.mobile-menu .button.push-right {
+    left            : 300px;
+    top             : 0;
+    background-color: #FD846B;
+    padding         : 2.5px 5px;
+    position        : fixed;
+}
+
+.mobile-menu .middle {
+    margin: 0 auto;
+}
+
+.mobile-menu .button.active .top {
+    transform: translateY(10px) rotateZ(45deg);
+}
+
+.mobile-menu .button.active .bottom {
+    transform: translateY(-10px) rotateZ(-45deg);
+}
+
+.mobile-menu .button.active .middle {
+    width: 0;
+}
+
+.mobile-menu .mobile_sidebar {
+    height          : 100%;
+    width           : 0;
+    position        : fixed;
+    top             : 0;
+    left            : 0;
+    background-color: #FD846B;
+    overflow-x      : hidden;
+    transition      : 0.7s;
+    z-index         : 9998;
+}
+
+.mobile-menu .mobile_sidebar.active {
+    width: 300px;
+}
+
+.mobile-menu .mobile_sidebar ul li a {
+    color: #fff;
+}
+
+.mobile-menu .search-bar {
+    position: relative;
+}
+
+.mobile-menu .input-group-field {
+    border       : none;
+    width        : 100%;
+    height       : 40px;
+    border-bottom: 1px solid #ececec;
+}
+
+.mobile-menu .icon-search {
+    position        : absolute;
+    right           : 0;
+    padding         : 11px 12px;
+    background-color: #fff;
+    border          : none;
+    border-bottom   : 1px solid #ececec;
+}
+
+.mobile-menu a {
+    display         : block;
+    width           : 100%;
+    color           : #000;
+    background-color: #fff;
+    border-bottom   : 1px solid #ececec;
+    padding         : 20px 16px;
+}
+
+.mobile-filter .mobile_filter_sidebar {
+    height          : 100%;
+    width           : 0;
+    position        : fixed;
+    top             : 0;
+    left            : 0;
+    background-color: #FD846B;
+    overflow-x      : hidden;
+    transition      : 0.2s;
+    z-index         : 9999;
+}
+
+.mobile-filter .mobile_filter_sidebar.active {
+    width: 300px;
+}
+
+.mobile-filter .button_filter {
+    position        : fixed;
+    top             : 35%;
+    background-color: #FD846B;
+    padding         : 9.5px 10px;
+    left            : 10px;
+    border-radius   : 50%;
+    z-index         : 9998;
+}
+
+.mobile-filter .filter-close {
+    padding: 10px;
 }
 
 
@@ -507,10 +672,6 @@ html {
     right      : 0;
     /* display : none; */
 }
-
-/* .product-list .card-image:hover .card-img-slide {
-    
-} */
 
 .product-list .slideInRight {
     display            : block !important;
@@ -951,4 +1112,126 @@ html {
 .footer-container p:last-child {
     color     : #fff;
     margin-top: 40px;
+}
+
+/* ------------------------ RESPONSIVE ------------------------ */
+
+/* TABLET */
+@media (max-width: 1024px) and (min-width: 740px) {
+
+    .pl-5 {
+        padding-left: 1rem !important;
+    }
+
+    .pr-5 {
+        padding-right: 1rem !important;
+    }
+
+    /* ------------------------ HEADER ------------------------ */
+    .header-container .header_menu {
+        display: none;
+    }
+
+    .header-container .header_account .dropdown,
+    .header-container .header_account .fa-user {
+        display: none;
+    }
+
+    .header-container .header_account ul {
+        display: block;
+    }
+
+    .header-container .header_account ul li {
+        padding: 23px 0px;
+    }
+
+    .header-container .header_logo {
+        margin-left: 25%;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+
+    .mobile-filter .button_filter {
+        display: block;
+    }
+
+    .laptop-filter .product_sidebar {
+        display: none;
+    }
+
+    .product-shop .product_sidebar .category h4 {
+        margin-top: 0;
+    }
+
+    .product-shop .best_seller .carousel-cell a {
+        color: #000;
+    }
+
+    .product-shop .toolbar label {
+        font-size: 14px;
+    }
+
+    .product-shop .toolbar .col-md-8 .dropdown span {
+        font-size: 14px;
+    }
+
+    .product-shop .toolbar .col-md-8 .dropdown .btn {
+        padding: 0.3rem 0.5rem;
+    }
+
+    .product-list img {
+        width    : auto !important;
+        max-width: 100% !important;
+    }
+
+    .product-list .pro_view {
+        margin-top : -275px;
+        margin-left: -350px;
+        width      : 700px;
+        height     : 450px;
+    }
+
+    .pro_btn {
+        display: block;
+        padding: 7px 0;
+    }
+
+    .product-list .pro_view .pro_view_details .col-md-12,
+    .product-list .pro_view .pro_view_details .col-md-6 {
+        margin : 5px 0;
+        padding: 0;
+    }
+
+    .product-list .pro_view_quantity button {
+        padding: 6.5px 8px;
+    }
+
+    #quantity {
+        width     : 32px !important;
+        height    : 32px !important;
+        margin-top: 1px;
+    }
+
+    .product-list .slideOut {
+        display: none !important;
+        animation: none !important;
+    }
+
+    .product-list .slideInRight {
+        display: none !important;
+        animation: none !important;
+    }
+
+    @keyframes slideDownHalf {
+        0% {
+            height: 0;
+        }
+
+        100% {
+            height: 450px;
+        }
+    }
+
 }
