@@ -130,17 +130,27 @@ $('.mobile_overlay').click(function () {
 $('.button_filter').click(function () {
     $('.mobile_filter_sidebar').toggleClass('active');
     $('.mobile_filter_overlay').toggleClass('active');
+    if($('.mobile_filter_overlay').hasClass('active')){
+        $(document.body).css('overflow', 'hidden');
+    }
 });
 
 $('#filter_close').click(function () {
     $('.mobile_filter_sidebar').toggleClass('active');
     $('.mobile_filter_overlay').toggleClass('active');
+    if(!$('.mobile_filter_overlay').hasClass('active')){
+        $(document.body).css('overflow', 'scroll');
+    }
 });
 
 $('.mobile_filter_overlay').click(function () {
     $('.mobile_filter_sidebar').toggleClass('active');
     $('.mobile_filter_overlay').toggleClass('active');
+    if(!$('.mobile_filter_overlay').hasClass('active')){
+        $(document.body).css('overflow', 'scroll');
+    }
 });
+
 
 
 var onTop = document.getElementById('top');
