@@ -120,19 +120,26 @@ $('.button').click(function () {
     $('.mobile_overlay').toggleClass('active');
 });
 
+$('.mobile_overlay').click(function () {
+    $('.button').toggleClass('push-right');
+    $('.button').toggleClass('active');
+    $('.mobile_sidebar').toggleClass('active');
+    $('.mobile_overlay').toggleClass('active');
+});
+
 $('.button_filter').click(function () {
     $('.mobile_filter_sidebar').toggleClass('active');
-    $('.mobile_overlay').toggleClass('active');
+    $('.mobile_filter_overlay').toggleClass('active');
 });
 
-$('.mobile_overlay').click(function () {
+$('#filter_close').click(function () {
     $('.mobile_filter_sidebar').toggleClass('active');
-    $('.mobile_overlay').toggleClass('active');
+    $('.mobile_filter_overlay').toggleClass('active');
 });
 
-$('.filter-close').click(function () {
+$('.mobile_filter_overlay').click(function () {
     $('.mobile_filter_sidebar').toggleClass('active');
-    $('.mobile_overlay').toggleClass('active');
+    $('.mobile_filter_overlay').toggleClass('active');
 });
 
 
